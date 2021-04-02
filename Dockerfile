@@ -4,7 +4,8 @@ WORKDIR /go/src/github.com/ypelud/test-mutating-webhook
 COPY *.go .
 COPY go.mod .
 RUN go mod tidy \
-  && CGO_ENABLED=0 GOARM=7 GOARCH=amd64 go build -a -installsuffix cgo --ldflags '-w' -o webhook .
+  && CGO_ENABLED=0 GOARM=7 GOARCH=amd64 \
+  go build -a -installsuffix cgo --ldflags '-w' -o webhook .
 
 
 # image
