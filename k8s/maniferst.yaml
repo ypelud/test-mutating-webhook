@@ -38,7 +38,7 @@ spec:
             - --alsologtostderr
             - -v=4
             - 2>&1
-          image: webhook
+          image: ypelud/test-mutating-webhook:latest
           imagePullPolicy: Never
           name: test-webhook
           ports:
