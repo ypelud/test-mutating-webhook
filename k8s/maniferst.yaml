@@ -35,8 +35,6 @@ spec:
         - args:
             - --tls-cert-file=/webhook.local.config/certificates/tls.crt
             - --tls-private-key-file=/webhook.local.config/certificates/tls.key
-            - --alsologtostderr
-            - -v=4
             - 2>&1
           image: ypelud/test-mutating-webhook:latest
           imagePullPolicy: Never
